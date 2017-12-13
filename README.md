@@ -9,17 +9,39 @@ or build from source (see later).
 Usage
 =====
 
-    make_test_files [flags]
+Usage: make_test_files [flags] <directory>
 
-Flags
+This command makes a random directory structure with random files in
+<directory>.  The options can be used to control exactly which files
+get made.
 
-    -n=100: Iterations to test - default 100
+The file names and sizes will be identical each time the command is
+run with the same parameters.  -seed can be used to change what is
+created.
 
-It will produce output like this
-
-    $ make_test_files 
-    2013/07/02 16:03:30 That took 988.255164ms for 100 fsyncs
-    2013/07/02 16:03:30 That took 9.882551ms per fsync
+Options:
+  -files-per-directory int
+    	Average number of files per directory (default 10)
+  -loop
+    	Loop forever
+  -max-depth int
+    	Maximum depth of directory heirachy (default 10)
+  -max-name-length int
+    	Maximum size of files to create (default 12)
+  -max-size int
+    	Maximum size of files to create (default 100)
+  -min-name-length int
+    	Minimum size of file to create (default 4)
+  -min-size int
+    	Minimum size of file to create
+  -n int
+    	Number of files to create (default 1000)
+  -seed int
+    	Seed for the random number generator (default 1)
+  -sync
+    	Fsync each file
+  -v	Be more verbose
+  -z	Fill files with zeroes instead of random data
 
 Build
 =====
