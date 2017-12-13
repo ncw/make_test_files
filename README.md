@@ -1,7 +1,7 @@
-Fsync bench
-===========
+Make test files
+===============
 
-Benchmark fsync
+Create a tree of random files for testing.
 
 Download a [binary from github](https://github.com/ncw/make_test_files/releases/latest)
 or build from source (see later).
