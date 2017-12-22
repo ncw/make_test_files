@@ -9,6 +9,7 @@ or build from source (see later).
 Usage
 =====
 
+```
 Usage: make_test_files [flags] <directory>
 
 This command makes a random directory structure with random files in
@@ -42,6 +43,7 @@ Options:
     	Fsync each file
   -v	Be more verbose
   -z	Fill files with zeroes instead of random data
+```
 
 Build
 =====
